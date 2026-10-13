@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Django Website</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{% static 'mycss.css' %}">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <h1>Sagar Group of Institutions</h1>
+
+        <p>Welcome to My Django Website</p>
+
+    </header>
+
+
+    <!-- NAVIGATION BUTTONS -->
+    <nav class="navbar">
+
+        <a href="{% url 'home' %}">Home</a>
+
+        <a href="{% url 'about' %}">About</a>
+
+        <a href="{% url 'info' %}">Info</a>
+
+    </nav>
+
+
+    
+<!-- IMAGE SECTION -->
+
+<section class="image-section">
+
+    <h2>Our Gallery</h2>
+
+    <div class="image-container">
+
+        {% block images %}
+
+        {% endblock %}
+
+    </div>
+
+</section>
+
+
+<!-- PAGE CONTENT -->
+
+<section class="main-section">
+
+    {% block content %}
+
+    {% endblock %}
+
+</section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <h3>Sagar Group of Institutions</h3>
+
+        <p>© 2026 All Rights Reserved</p>
+
+    </footer>
+
+</body>
+
+</html>

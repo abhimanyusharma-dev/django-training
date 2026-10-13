@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block images %}
+
+<div class="image-card">
+    <img src="{% static 'image7.png' %}">
+</div>
+
+<div class="image-card">
+    <img src="{% static 'image8.png' %}">
+</div>
+
+{% endblock %}
+
+
+{% block content %}
+
+<h1>Information Page</h1>
+
+<p>This is the information page.</p>
+
+{% endblock %}

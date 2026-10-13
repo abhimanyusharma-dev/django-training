@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="card form-card">
+
+        <h1>
+            Prediction Result
+        </h1>
+
+        <div class="result">
+
+            <h2>
+                Output
+            </h2>
+
+            <h1>
+                {{ ans }}
+            </h1>
+
+        </div>
+
+
+        <br>
+
+        <h3>Entered Details</h3>
+
+        <p>
+            CGPA: {{ lis.0 }}
+        </p>
+
+        <p>
+            IQ: {{ lis.1 }}
+        </p>
+
+        <p>
+            Profile Score: {{ lis.2 }}
+        </p>
+
+
+        <br>
+
+        <a
+            href="{% url 'prediction' %}"
+            class="btn"
+        >
+            Try Again
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

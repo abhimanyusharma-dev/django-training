@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Hub</title>
+    <link rel="stylesheet" href="{% static 'shopping.css' %}">
+</head>
+
+<body>
+
+    <h1>Shopping Hub</h1>
+
+    <!-- Amazon -->
+    <div>
+        <img src="{% static 'amazon.webp' %}" 
+             alt="Amazon" 
+             width="250">
+
+        <br>
+
+        <a href="https://www.amazon.in/" target="_blank">
+            Visit Amazon
+        </a>
+    </div>
+
+    <br><br>
+
+    <!-- Flipkart -->
+    <div>
+        <img src="{% static  'flipcart.webp' %}" 
+             alt="Flipkart" 
+             width="250">
+
+        <br>
+
+        <a href="https://www.flipkart.com/" target="_blank">
+            Visit Flipkart
+        </a>
+    </div>
+
+    <br><br>
+
+    <!-- Meesho -->
+    <div>
+        <img src="{% static 'misho.png' %}" 
+             alt="Meesho" 
+             width="250">
+
+        <br>
+
+        <a href="https://www.meesho.com/" target="_blank">
+            Visit Meesho
+        </a>
+    </div>
+
+    <br><br><br>
+
+    <!-- Video -->
+    <h2>Shopping Video</h2>
+
+    <video width="600" controls>
+        <source src="{% static 'video.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="hero">
+
+    <h1>
+        Student Placement Prediction
+    </h1>
+
+    <p>
+        An intelligent platform designed to
+        help students understand their
+        placement possibilities using
+        academic and profile information.
+    </p>
+
+
+    <a
+        href="{% url 'register' %}"
+        class="btn"
+    >
+        Get Started
+    </a>
+
+    <a
+        href="{% url 'login' %}"
+        class="btn"
+    >
+        Login
+    </a>
+
+
+    <div class="features">
+
+        <div class="feature">
+
+            <h2>
+                Student Profile
+            </h2>
+
+            <p>
+                Register and manage your
+                basic student information.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <h2>
+                Placement Prediction
+            </h2>
+
+            <p>
+                Enter your academic and
+                profile details.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <h2>
+                Smart Result
+            </h2>
+
+            <p>
+                Get your placement prediction
+                through the ML model.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

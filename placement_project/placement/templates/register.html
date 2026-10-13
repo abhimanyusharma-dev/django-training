@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="container">
+
+    <div class="card form-card">
+
+        <h1>
+            Student Registration
+        </h1>
+
+        <p>
+            Create your student account
+            to continue.
+        </p>
+
+        <br>
+
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{ form.non_field_errors }}
+
+
+            <p>
+
+                {{ form.student_id.label_tag }}
+
+                {{ form.student_id }}
+
+                {{ form.student_id.errors }}
+
+            </p>
+
+
+            <p>
+
+                {{ form.name.label_tag }}
+
+                {{ form.name }}
+
+                {{ form.name.errors }}
+
+            </p>
+
+
+            <p>
+
+                {{ form.mobile.label_tag }}
+
+                {{ form.mobile }}
+
+                {{ form.mobile.errors }}
+
+            </p>
+
+
+            <p>
+
+                {{ form.branch.label_tag }}
+
+                {{ form.branch }}
+
+                {{ form.branch.errors }}
+
+            </p>
+
+
+            <p>
+
+                {{ form.password.label_tag }}
+
+                {{ form.password }}
+
+                {{ form.password.errors }}
+
+            </p>
+
+
+            <p>
+
+                <label>
+                    Confirm Password
+                </label>
+
+                {{ form.confirm_password }}
+
+                {{ form.confirm_password.errors }}
+
+            </p>
+
+
+            <button
+                type="submit"
+                class="btn"
+            >
+                Register
+            </button>
+
+        </form>
+
+
+        <p style="margin-top:20px;">
+
+            Already have an account?
+
+            <a href="{% url 'login' %}">
+                Login
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

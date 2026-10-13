@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Form</title>
+  <link rel="stylesheet" href="{% static 'mycss.css' %}">
+</head>
+<body>
+  
+
+  <div>
+    <div> 
+      <p>{{ question }}</p>
+      <div><input type="radio" name="answer" value="{{a}}">{{option1}}</div>
+      <div><input type="radio" name="answer" value="{{b}}">{{option2}}</div>
+      <div><input type="radio" name="answer" value="{{c}}">{{option3}}</div>
+      <div><input type="radio" name="answer" value="{{d}}">{{option4}}</div>
+    </div>
+    <div>
+      <img src="{% static 'image.jpeg' %}" alt="College Image" width="300">
+      <video width="320" height="240" controls>
+        <source src="{% static 'video.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="container">
+
+    <div class="card form-card">
+
+        <h1>
+            Student Login
+        </h1>
+
+        <p>
+            Login to access your placement
+            prediction page.
+        </p>
+
+        <br>
+
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{ form.non_field_errors }}
+
+
+            <p>
+
+                {{ form.student_id.label_tag }}
+
+                {{ form.student_id }}
+
+                {{ form.student_id.errors }}
+
+            </p>
+
+
+            <p>
+
+                {{ form.password.label_tag }}
+
+                {{ form.password }}
+
+                {{ form.password.errors }}
+
+            </p>
+
+
+            <button
+                type="submit"
+                class="btn"
+            >
+                Login
+            </button>
+
+        </form>
+
+
+        <p style="margin-top:20px;">
+
+            Don't have an account?
+
+            <a href="{% url 'register' %}">
+                Register
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

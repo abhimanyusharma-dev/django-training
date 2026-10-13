@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product List</title>
+</head>
+
+<body>
+
+    <div>
+
+        <h1>Product List</h1>
+
+        <table border="1">  
+
+            <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Offer</th>
+            </tr>
+
+            {% for i in Product %}
+
+            <tr>
+                <td>{{i.p_id}}</td>
+                <td>{{i.p_name}}</td>
+                <td>{{i.p_price}}</td>
+                <td>{{i.p_offer}}</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+
+        <!-- CREATE BUTTON -->
+
+        <form action="{% url 'createproduct' %}" method="get">
+
+            <button type="submit">
+                Create Product
+            </button>
+
+        </form>
+
+
+        <!-- UPDATE BUTTON -->
+
+        <form action="{% url 'updateProduct' %}" method="get">
+
+            <button type="submit">
+                Update Product
+            </button>
+
+        </form>
+
+
+        <!-- DELETE BUTTON -->
+
+        <form action="{% url 'deleteProduct' %}" method="get">
+
+            <button type="submit">
+                Delete Product
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

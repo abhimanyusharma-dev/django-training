@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="card form-card">
+
+        <h1>
+            Student Placement Prediction
+        </h1>
+
+        {% if student_name %}
+            <p>
+                Welcome,
+                <strong>{{ student_name }}</strong>
+            </p>
+        {% endif %}
+
+        <br>
+
+        <form action="{% url 'result' %}" method="GET">
+
+            <p>
+                <label>CGPA:</label>
+
+                <input
+                    type="number"
+                    name="CGPA"
+                    step="0.01"
+                    required
+                    placeholder="Enter CGPA"
+                >
+            </p>
+
+
+            <p>
+                <label>IQ:</label>
+
+                <input
+                    type="number"
+                    name="IQ"
+                    required
+                    placeholder="Enter IQ"
+                >
+            </p>
+
+
+            <p>
+                <label>Profile Score:</label>
+
+                <input
+                    type="number"
+                    name="Profile"
+                    step="0.01"
+                    required
+                    placeholder="Enter Profile Score"
+                >
+            </p>
+
+
+            <button
+                type="submit"
+                class="btn"
+            >
+                Predict Placement
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

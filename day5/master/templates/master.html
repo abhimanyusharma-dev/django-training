@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'mycss.css' %}">
+</head>
+<body>
+  <h1 style="color: aqua; font-family: Arial, sans-serif; font-size: 24px; height: 100px;  width: 100%;" >Sagar group of institutions of science and technology</h1>
+  <div>
+    <img src="{% static 'sistec.jpeg' %}" alt="Sagar Group Logo" style="width: 200px; height: auto;">
+  </div>
+  {% block content %}
+  <h1 style="color: red; font-family: Arial, sans-serif; font-size: 24px; height: 100px;  width: 100%;" >Welcome Abhimanyu sharma</h1>
+  {% endblock %}
+</body>
+</html>

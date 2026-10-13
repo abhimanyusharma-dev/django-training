@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'result.css' %}">
+</head>
+<body>
+  <div>
+    <h1>Result</h1>
+    <p>Name: {{ name }}</p>
+    <div id="marks">
+      {% if Marks >= 80 %}
+        <p>Congratulations! You passed the exam grade A.</p>
+      {% elif Marks >= 70 %}
+        <p>Congratulations! You passed the exam.grade B.</p>
+      {% elif Marks >= 60 %}
+        <p>Congratulations! You passed the exam.grade C.</p>
+      {% elif Marks >= 50 %}
+        <p>Congratulations! You passed the exam.grade D.</p>
+      {% else %}
+        <p>Sorry, you failed the exam. Better luck next time!</p>
+      {% endif %}
+
+    </div>
+  </div>
+</body>
+</html>
